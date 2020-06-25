@@ -101,7 +101,8 @@ namespace gPratical.View
                 Equipamentos.Unit E = new Equipamentos.Unit();
                 E = LeituraFormulario();
                 E.ValidaClasse();
-                MessageBox.Show("Classe foi inicializada sem erros", "gPratical");
+                MessageBox.Show("Classe foi inicializada sem erros", "gPratical", MessageBoxButton.OK, MessageBoxImage.Information);;
+                LimpaFormulario();
             }
 
             catch (ValidationException Ex)
@@ -111,7 +112,7 @@ namespace gPratical.View
 
             catch (Exception)
             {
-                MessageBox.Show("Cadastro não inicializado com sucesso, preencha todos os campos", "gPratical", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Cadastro não inicializado com sucesso, preencha todos os campos", "gPratical", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
         }
@@ -129,16 +130,16 @@ namespace gPratical.View
         private void LimpaFormulario()
         {
 
-            cmbTipo.SelectedValue = "";
-            txtMarca.Text = "";
-            txtModelo.Text = "";
-            txtSN.Text = "";
-            cmbVoltagemEntrada.SelectedValue = "";
-            cmbVoltagemSaida.SelectedValue = "";
-            txtPotencia.Text = "";
-            dtpValidade.SelectedDate.GetValueOrDefault();
-            cmbSetor.SelectedValue = "";
-            txtLocal.Text = "";
+            cmbTipo.SelectedValue = null;
+            txtMarca.Text = null;
+            txtModelo.Text = null;
+            txtSN.Text = null;
+            cmbVoltagemEntrada.SelectedValue = null;
+            cmbVoltagemSaida.SelectedValue = null;
+            txtPotencia.Text = null;
+            dtpValidade.SelectedDate = null;
+            cmbSetor.SelectedValue = null;
+            txtLocal.Text = null;
             txtLocal.Visibility = Visibility.Collapsed;
         }
     }

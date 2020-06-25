@@ -28,38 +28,38 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition Height="1.5*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="txtNome"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Nome Completo" MaxLength="100" ToolTip="Insira seu nome completo." Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+            <TextBox x:Name="txtNome"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Nome Completo" MaxLength="100" ToolTip="Insira seu nome completo." Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="1"/>
-            <DatePicker x:Name="dtpDataNascimento" VerticalAlignment="Bottom"  materialDesign:HintAssist.Hint="Data de Nascimento" ToolTip="Insira sua data de nascimento" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="2" Margin="5" TabIndex="2"/>
-            <ComboBox x:Name="cmbGenero" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" ToolTip="Insira seu genero" Grid.Row="3" materialDesign:HintAssist.Hint="Gênero" Grid.Column="3" Grid.ColumnSpan="1" Margin="5"
+            <DatePicker x:Name="dtpDataNascimento" VerticalAlignment="Bottom"  materialDesign:HintAssist.Hint="Data de Nascimento" ToolTip="Insira sua data de nascimento" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="2" Grid.Row="1" Margin="5" TabIndex="2"/>
+            <ComboBox x:Name="cmbGenero" VerticalAlignment="Bottom" HorizontalContentAlignment="Left" ToolTip="Insira seu genero" Grid.Row="4" materialDesign:HintAssist.Hint="Gênero" Grid.Column="3" Grid.ColumnSpan="1" Margin="5"
                         ItemsSource="{Binding LongListToTestComboVirtualization}"
-                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="10" SelectionChanged="cmbGenero_SelectionChanged"/>
-            <TextBox x:Name="txtCargo" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Cargo"  MaxLength="100" ToolTip="Insira seu cargo" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" Margin="5"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="10"/>
+            <TextBox x:Name="txtCargo" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Cargo"  MaxLength="100" ToolTip="Insira seu cargo" Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="4"/>
-            <ComboBox x:Name="cmbSetor" HorizontalContentAlignment="Left" materialDesign:HintAssist.Hint="Setor" ToolTip="Insira o setor do usuario a ser cadastrado" Grid.Row="1" Grid.Column="3" VerticalAlignment="Bottom" Margin="5" 
+            <ComboBox x:Name="cmbSetor" HorizontalContentAlignment="Left" materialDesign:HintAssist.Hint="Setor" ToolTip="Insira o setor do usuario a ser cadastrado" Grid.Row="2" Grid.Column="3" VerticalAlignment="Bottom" Margin="5" 
                         ItemsSource="{Binding LongListToTestComboVirtualization}"
                         Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="5"/>
-            <TextBox x:Name="txtOutroGenero" VerticalAlignment="Top" HorizontalContentAlignment="Left" materialDesign:HintAssist.Hint="" ToolTip="" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="1" Margin="5" Visibility="Collapsed"/>
-            <TextBox x:Name="txtCidade" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Cidade" MaxLength="50" ToolTip="Insira sua cidade"  Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtCidade" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Cidade" MaxLength="50" ToolTip="Insira sua cidade"  Grid.Row="4" Grid.Column="0"  Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="8"/>
-            <TextBox x:Name="txtBairro" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Bairro" MaxLength="50" ToolTip="Insira seu bairro" Grid.Row="3" Grid.Column="1"  Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtBairro" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Bairro" MaxLength="50" ToolTip="Insira seu bairro" Grid.Row="4" Grid.Column="1"  Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" Panel.ZIndex="9" TabIndex="9"/>
-            <TextBox x:Name="txtEndereco" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Endereco" MaxLength="150" ToolTip="Insira seu endereco" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="2" Margin="5"
+            <TextBox x:Name="txtEndereco" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Endereco" MaxLength="150" ToolTip="Insira seu endereco" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="6" />
-            <ComboBox x:Name="cmbEstado" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Estado"  ToolTip="Insira seu estado"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" Margin="5"
+            <ComboBox x:Name="cmbEstado" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Estado"  ToolTip="Insira seu estado"  Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="1" Margin="5"
                         ItemsSource="{Binding LongListToTestComboVirtualization}"
                         Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="7"/>
-            <TextBox x:Name="txtTelefone" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Telefone" MaxLength="100" ToolTip="Insira seu telefone" Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtTelefone" VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Telefone" MaxLength="100" ToolTip="Insira seu telefone" Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="3"/>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Grid.ColumnSpan="2">
                 <Button x:Name="btnEditar" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="0 0 25 25" ToolTip="Cadastrar um novo usuário no sistema" Content="Editar" Margin="5,0"/>
                 <Button x:Name="btnLimpar" Click="btnLimpar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="0 0 25 25" ToolTip="Cancelar o cadastro e voltar para a pagina inicial"  Content="Limpar" Margin="5,0"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4">
-                <Button x:Name="btnCadastrar" Click="btnCadastrar_Click"  Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cadastrar um novo usuário no sistema" Content="Cadastrar" Margin="5,0" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4"/>
-                <Button x:Name="btnCancelar" Click="btnCancelar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cancelar o cadastro e voltar para a pagina inicial"  Content="Cancelar" Margin="5,0" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4"/>
-                </StackPanel>
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="6">
+                <Button x:Name="btnCadastrar" Click="btnCadastrar_Click"  Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cadastrar um novo usuário no sistema" Content="Cadastrar" Margin="5,0"/>
+                <Button x:Name="btnCancelar" Click="btnCancelar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cancelar o cadastro e voltar para a pagina inicial"  Content="Cancelar" Margin="5,0"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </UserControl>

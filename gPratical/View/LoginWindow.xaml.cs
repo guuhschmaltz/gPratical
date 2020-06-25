@@ -36,5 +36,9 @@ namespace gPratical.View
             this.Close();
         }
 
+        private void btnTeste_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Você clicou no botão teste");
+        }
     }
 }

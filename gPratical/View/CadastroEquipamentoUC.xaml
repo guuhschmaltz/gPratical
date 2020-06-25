@@ -26,35 +26,37 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <ComboBox x:Name="cmbTipo" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Tipo" ToolTip="Insira o tipo do equipamento" Grid.Column="0" Grid.ColumnSpan="1" Margin="5"   ItemsSource="{Binding LongListToTestComboVirtualization}"
+            <ComboBox x:Name="cmbTipo" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Tipo" ToolTip="Insira o tipo do equipamento" Grid.Column="0" Grid.ColumnSpan="1" Margin="5" Grid.Row="1"   ItemsSource="{Binding LongListToTestComboVirtualization}"
             Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="3"/>
-            <TextBox x:Name="txtMarca"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Marca" MaxLength="100" ToolTip="Insira o nome da marca" Grid.Column="1" Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtMarca"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Marca" MaxLength="100" ToolTip="Insira o nome da marca" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="4"/>
-            <TextBox x:Name="txtSN"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="(S/N):" MaxLength="100" ToolTip="Insira o número de série do equipamento" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtSN"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="(S/N):" MaxLength="100" ToolTip="Insira o número de série do equipamento" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="6"/>
-            <TextBox x:Name="txtPotencia"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Potência:" MaxLength="100" ToolTip="Insira a potência do equipamento" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtPotencia"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Potência:" MaxLength="100" ToolTip="Insira a potência do equipamento" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="9"/>
-            <TextBox x:Name="txtModelo"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Modelo" MaxLength="100" ToolTip="Insira o modelo do equipamento" Grid.Column="2" Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtModelo"  VerticalAlignment="Bottom" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Modelo" MaxLength="100" ToolTip="Insira o modelo do equipamento" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" TabIndex="5"/>
-            <ComboBox x:Name="cmbVoltagemEntrada" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Voltagem de Entrada" ToolTip="Selecione a voltagem de Entrada" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" Margin="5"
+            <ComboBox x:Name="cmbVoltagemEntrada" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Voltagem de Entrada" ToolTip="Selecione a voltagem de Entrada" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Margin="5"
                 ItemsSource="{Binding LongListToTestComboVirtualization}"
                 Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="7"/>
-            <ComboBox x:Name="cmbVoltagemSaida" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Voltagem de Saída" ToolTip="Selecione a voltagem de Saida" Grid.Column="2" Grid.Row="1" Margin="5"
+            <ComboBox x:Name="cmbVoltagemSaida" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Voltagem de Saída" ToolTip="Selecione a voltagem de Saida" Grid.Column="2" Grid.Row="2" Margin="5"
                 ItemsSource="{Binding LongListToTestComboVirtualization}"
                 Style="{StaticResource MaterialDesignFloatingHintComboBox}" TabIndex="8"/>
-            <ComboBox x:Name="cmbSetor" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Setor" ToolTip="Selecione o Setor onde o equipamento se encontra" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="1" Margin="5"   ItemsSource="{Binding LongListToTestComboVirtualization}"
+            <ComboBox x:Name="cmbSetor" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Setor" ToolTip="Selecione o Setor onde o equipamento se encontra" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="1" Margin="5"   ItemsSource="{Binding LongListToTestComboVirtualization}"
   Style="{StaticResource MaterialDesignFloatingHintComboBox}" SelectionChanged="cmbSetor_SelectionChanged" TabIndex="11"/>
-            <TextBox x:Name="txtLocal"  VerticalAlignment="Top" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Local" MaxLength="100" ToolTip="Insira o local onde o equipamento se encontra no setor" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="1" Margin="5"
+            <TextBox x:Name="txtLocal"  VerticalAlignment="Top" HorizontalContentAlignment="Left"  materialDesign:HintAssist.Hint="Local" MaxLength="100" ToolTip="Insira o local onde o equipamento se encontra no setor" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="1" Margin="5"
                       Style="{StaticResource MaterialDesignFloatingHintTextBox}" Visibility="Collapsed"/>
-            <DatePicker x:Name="dtpValidade" ToolTip="Insira a data de validade do equipamento" VerticalAlignment="Bottom"  materialDesign:HintAssist.Hint="Validade" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="1" Grid.Row="2" Margin="5" TabIndex="10"/>
+            <DatePicker x:Name="dtpValidade" ToolTip="Insira a data de validade do equipamento" VerticalAlignment="Bottom"  materialDesign:HintAssist.Hint="Validade" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="1" Grid.Row="3" Margin="5" TabIndex="10"/>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Grid.ColumnSpan="2">
                 <Button x:Name="btnEditar" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="0 0 25 25" ToolTip="Editar um equipamento no sistema" Content="Editar" Margin="5,0" TabIndex="1"/>
                 <Button x:Name="btnLimpar" Click="btnLimpar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="0 0 25 25" ToolTip="Limapr todos os campos"  Content="Limpar" Margin="5,0" TabIndex="2"/>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4">
-                <Button x:Name="btnCadastrar"  Click="btnCadastrar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cadastrar um novo usuário no sistema" Content="Cadastrar" Margin="5,0" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4" TabIndex="12"/>
-                <Button x:Name="btnCancelar"  Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cancelar o cadastro e voltar para a pagina inicial"  Content="Cancelar" Margin="5,0" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="4" TabIndex="13"/>
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="5">
+                <Button x:Name="btnCadastrar"  Click="btnCadastrar_Click" Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cadastrar um novo usuário no sistema" Content="Cadastrar" Margin="5,0" TabIndex="12"/>
+                <Button x:Name="btnCancelar"  Style="{StaticResource MaterialDesignRaisedAccentButton}"  Width="100" Height="40" materialDesign:ButtonAssist.CornerRadius="25 25 0 0" ToolTip="Cancelar o cadastro e voltar para a pagina inicial"  Content="Cancelar" Margin="5,0" TabIndex="13"/>
             </StackPanel>
         </Grid>
     </Grid>

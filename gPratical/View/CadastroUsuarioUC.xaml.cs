@@ -37,24 +37,20 @@ namespace gPratical.View
                 Usuario.Unit C = new Usuario.Unit();
                 C = LeituraFormulario();
                 C.ValidaClasse();
-                MessageBox.Show("Classe foi inicializada sem erros", "gPratical");
+                MessageBox.Show("Classe foi inicializada sem erros", "gPratical", MessageBoxButton.OK, MessageBoxImage.Information); ;
+                LimpaFormulario();
             }
+
             catch (ValidationException Ex)
             {
-                MessageBox.Show(Ex.Message, "gPratical", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Ex.Message, "gPratical", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
             catch (Exception)
             {
-                MessageBox.Show("Cadastro não inicializado com sucesso, preencha todos os campos", "gPratical", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Cadastro não inicializado com sucesso, preencha todos os campos", "gPratical", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-
-
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
 
         Usuario.Unit LeituraFormulario()
         {
@@ -68,57 +64,32 @@ namespace gPratical.View
             C.Estado = cmbEstado.SelectedValue.ToString();
             C.Cidade = txtCidade.Text;
             C.Bairro = txtBairro.Text;
-            var genero = cmbGenero.SelectedValue.ToString();
-            var OutroGenero = txtOutroGenero.Text;
-            if (genero == "Outro")
-            {
-                C.Genero = OutroGenero;
-            }
-            else
-            {
-                C.Genero = genero;
-            }
+            C.Genero = cmbGenero.SelectedValue.ToString();
+
             return C;
-        }
-
-
-
-        private void cmbGenero_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Genero genero = (Genero)cmbGenero.SelectedItem;
-
-            if (genero.Nome == "Outro")
-            {
-                txtOutroGenero.Visibility = Visibility.Visible;
-                txtOutroGenero.Text = "";
-            }
-            else
-            {
-                txtOutroGenero.Text = "";
-                txtOutroGenero.Visibility = Visibility.Collapsed;
-            }
-
         }
 
         private void btnLimpar_Click(object sender, RoutedEventArgs e)
         {
             LimpaFormulario();
         }
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void LimpaFormulario()
         {
-            txtBairro.Text = "";
-            txtCargo.Text = "";
-            txtCidade.Text = "";
-            txtEndereco.Text = "";
-            txtNome.Text = "";
-            txtTelefone.Text = "";
-            txtOutroGenero.Text = "";
-            txtOutroGenero.Visibility = Visibility.Collapsed;
-            cmbEstado.SelectedValue = "";
-            cmbGenero.SelectedValue = "";
-            cmbSetor.SelectedValue = "";
-            dtpDataNascimento.SelectedDate.GetValueOrDefault();
+            txtBairro.Text = null;
+            txtCargo.Text = null;
+            txtCidade.Text = null;
+            txtEndereco.Text = null;
+            txtNome.Text = null;
+            txtTelefone.Text = null;
+            cmbEstado.SelectedIndex = -1;
+            cmbGenero.SelectedIndex = -1;
+            cmbSetor.SelectedIndex = -1;
+            dtpDataNascimento.SelectedDate = null;
         }
 
         private void CarregarCmbGenero()
