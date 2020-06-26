@@ -13,17 +13,16 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-        MinHeight="600"
-        MinWidth="900"
-        Title="ePratical" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+        MinHeight="768"
+        MinWidth="1024"
+        Title="ePratical" Height="900" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="180"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="225"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -52,8 +51,6 @@
             </ScrollViewer>
         </Grid>
         <Grid x:Name="GridPanelMain" Grid.Row="1" Grid.Column="1">
-        </Grid>
-        <Grid x:Name="GridPanelList" Grid.Row="2" Grid.Column="1">
         </Grid>
     </Grid>
 </Window>
