@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Solutions\WPF\gPratical\gPratical\obj\Debug\
+D:\Solutions\gPratical\gPratical\obj\Debug\
 gPratical
 none
 false
 DEBUG;TRACE
-C:\Solutions\WPF\gPratical\gPratical\App.xaml
+D:\Solutions\gPratical\gPratical\App.xaml
 5-27019689
 
 20738872697
-50317966997
+50500979210
 View\CadastroEquipamentoUC.xaml;View\CadastroUsuarioUC.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\MenuItemUC.xaml;
 
 False
